@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter your city"
+            spellcheck="false">
+            <button><img src="weather-app-img (6)/images/search.png"></button>
+        </div>
+        <div class="weather">
+            <img src="weather-app-img (6)/images/rain.png" class="weather-icon">
+            <h1 class="temp">27°c</h1>
+            <h2 class="city">Calicut</h2>
+            <div class="details">
+                <div class="col-1">
+                    <img src="weather-app-img (6)/images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="weather-app-img (6)/images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+     const apiKey="b142d2927b23f15fd3fbb28b65670764";
+     const apiUrl="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=calicut"
+     async function checkWeather() {
+        const response =await fetch(apiUrl+`&appid=${apiKey}`);
+        var data=await response.json();
+        console.log(data);
+        document.querySelector(".city").innerHTML=data.name;
+         document.querySelector(".temp").innerHTML=data.main.temp;
+          document.querySelector(".humidity").innerHTML=data.main.humidity;
+           document.querySelector(".wind").innerHTML=data.wind.speed;
+     }
+     checkWeather();
+    </script>
+</body>
+</html>
