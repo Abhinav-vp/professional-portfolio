@@ -107,5 +107,3 @@ setTimeout(() => {
       display.value = "Error";
     }
   }
-
-
