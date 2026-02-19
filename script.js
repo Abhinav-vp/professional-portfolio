@@ -78,3 +78,34 @@ document.getElementById("toast-simple").classList.remove("hidden");
 setTimeout(() => {
   document.getElementById("toast-simple").classList.add("hidden");
 }, 3000);
+
+  const modal = document.getElementById("calcModal");
+  const display = document.getElementById("display");
+
+  function openCalc() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeCalc() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  function append(val) {
+    display.value += val;
+  }
+
+  function clearDisplay() {
+    display.value = "";
+  }
+
+  function calculate() {
+    try {
+      display.value = eval(display.value);
+    } catch {
+      display.value = "Error";
+    }
+  }
+
+
