@@ -1,0 +1,10 @@
+<svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="160" fill="#FFFFFF"></rect>
+
+  <text x="300" y="95" text-anchor="middle" fill="#0F1115" font-size="64" font-family="Inter, Poppins, Montserrat, Arial, sans-serif" font-weight="600" letter-spacing="2">
+    abhinav
+  </text>
+
+  <!-- Accent line -->
+  <rect x="220" y="115" width="160" height="3" fill="#4F8CFF"></rect>
+</svg>

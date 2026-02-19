@@ -1,0 +1,9 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0F1115"></rect>
+
+  <!-- Letter A -->
+  <text x="256" y="330" text-anchor="middle" fill="#FFFFFF" font-size="300" font-family="Inter, Poppins, Montserrat, Arial, sans-serif" font-weight="700">
+    A
+  </text>
+</svg>
